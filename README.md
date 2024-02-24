@@ -8,7 +8,7 @@ python3 seed_phrase_generator.py --seed_phrase_length=<length> --verbose=<True/F
 
 python3 seed_phrase_generator.py -h
 ```
-![Alt text](<docs/CleanShot 2024-02-23 at 16.37.26.gif>)
+![Example](<docs/CleanShot 2024-02-23 at 16.44.38.gif>)
 ##### ⚠️ Warning
 Write down the seed phrase on paper and DO NOT copy it to the clipboard. This is a SECRET. Close the session when done.
 Keep it in a safe place. Do not share it with anyone. Do not take pictures of it. This seed phrase is the key to your wallet.
