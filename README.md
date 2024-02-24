@@ -4,9 +4,9 @@
 ## Getting started 🚀 
 Usage:
 ```bash
-python3 seed_phrase_generator.py --seed_phrase_length=<length> --verbose=<True/False>
+python3 generate_seed.py --seed_phrase_length=<length> --verbose=<True/False>
 
-python3 seed_phrase_generator.py -h
+python3 generate_seed.py -h
 ```
 ![Example](<docs/CleanShot 2024-02-23 at 16.44.38.gif>)
 ##### ⚠️ Warning
