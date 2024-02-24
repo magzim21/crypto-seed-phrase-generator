@@ -20,11 +20,13 @@ def generate_seed_phrase(seed_phrase_length=12, verbose=False):
     if seed_phrase_length not in [12, 15, 18, 21, 24]:
         raise ValueError("Invalid seed phrase length. Must be one of [12, 15, 18, 21, 24].")
 
+
     # Calculate the number of bits of entropy required
     entropy_bits = seed_phrase_length * 32 // 3
 
     # Generate entropy
-    entropy = os.urandom(entropy_bits // 8)
+    entropy = os.urandom(entropy_bits // 8) # this function accepts bytes as input, not bits
+    
 
     # Convert entropy to binary string
     entropy_bin = bin(int(binascii.hexlify(entropy), 16))[2:].zfill(entropy_bits)
@@ -47,7 +49,11 @@ def generate_seed_phrase(seed_phrase_length=12, verbose=False):
     print(colored("Keep it in a safe place. Do not share it with anyone. Do not take pictures of it. This seed phrase is the key to your wallet.", "grey"))
 
     # Print the seed phrase in green
-    print(colored(' '.join(seed_phrase), "green"))
+    seed_phrase_str = ' '.join(seed_phrase)
+    equal_signs = '=' * len(seed_phrase_str)
+    print(colored(equal_signs, "green"))
+    print(colored(seed_phrase_str, "green"))
+    print(colored(equal_signs, "green"))
 
     # Verbose mode: print the seed phrase as bits
     if verbose:
